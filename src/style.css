@@ -1,12 +1,17 @@
+.fal{
+	color: black;
+}
+
+
 * {
 	width: 500px;
 	margin: 0 auto;
 }
 
-p {
+h1 {
 	font-size: 3em;
 	text-align: center;
-	margin-bottom: 0.5em;
+	margin-top: 0.5em;
 }
 
 .title {
@@ -14,14 +19,20 @@ p {
 	border-radius: 10px;
 	padding-bottom: 20px;
 	margin-bottom: 10px;
-	margin-top: 50px;
+	margin-top: 10px;
 }
 
-.body {
+.lists {
 	background: #D1EEF9;
 	border-radius: 10px;
-	padding-bottom: 300px;
+	height: 350px;
+	
+}
+
+.lists p {
 	font-size: 20px;
+	text-align: center;
+
 }
 
 input{
@@ -29,21 +40,25 @@ input{
 	width : 400px;
 	height : 30px;
 	text-align: center;
-
 }
 
 .typeList{
 	width : 350px;
 	height : 30px;
 	margin-left: 50px;
+	margin-top : 15px;
+
 }
 
-.submit{
+.button1{
+	background: #368aaa;
+	border-radius: 10px;
+	border : none;
 	width: 40px;
 	height: 30px;
 }
 
-button{
+.button2{
 	background: #368aaa;
 	border-radius: 10px;
 	border : none;
