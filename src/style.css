@@ -1,9 +1,5 @@
-.fal{
-	color: black;
-}
-
-
-* {
+/* 특별한 상황아니면 절대 *(universal)를 selector로 사용하지 말 것 */
+body {
 	width: 500px;
 	margin: 0 auto;
 }
@@ -14,50 +10,50 @@ h1 {
 	margin-top: 0.5em;
 }
 
-.title {
+/* 그냥 tag를 selector로 하는 것보단 class나 id를 지정해줘서 selector를 하는게 더 좋음. 왜냐면 같은 tag가 여러게 일 수도 있으니깐 */
+.container {
 	background: #D1EEF9;
 	border-radius: 10px;
+	padding-top: 20px;
 	padding-bottom: 20px;
 	margin-bottom: 10px;
 	margin-top: 10px;
+	text-align: center;
+	max-width: 700px;
 }
 
-.lists {
+.todo-lists {
 	background: #D1EEF9;
 	border-radius: 10px;
 	height: 350px;
 }
 
-.lists p {
+.todo-lists p {
 	font-size: 20px;
 	text-align: center;
-	display : inline-block;
 }
 
-input{
+.todo-input{
+    vertical-align: middle;
+    height: 35px;
+	box-sizing: border-box;
+	width: 70%;
 	border: none;
-	width : 400px;
-	height : 30px;
 	text-align: center;
 }
 
-.typeList{
-	width : 350px;
-	height : 30px;
-	margin-left: 50px;
-	margin-top : 15px;
-
+.add-button{
+	vertical-align: middle;
+    height: 35px;
+	box-sizing: border-box;
+	cursor: pointer;
+	line-height: 1;
+	font-size: 25px;
+	background-color: #D1EEF9;
+	border: none;
 }
 
-.button1{
-	background: #368aaa;
-	border-radius: 10px;
-	border : none;
-	width: 40px;
-	height: 30px;
-}
-
-.button2{
+.clear-all-button{
 	background: #368aaa;
 	border-radius: 10px;
 	border : none;
@@ -67,7 +63,8 @@ input{
 	margin-top : 2em;
 }
 
-.lists doneButton {
+
+.todo-lists .done-button {
 	background: green;
 	border-radius: 10px;
 	border : none;
@@ -78,8 +75,7 @@ input{
 	display:inline;
 	float: left;
 }
-
-.lists deleteButton {
+ .todo-lists .delete-button {
 	background: red;
 	border-radius: 10px;
 	border : none;
