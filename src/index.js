@@ -1,14 +1,15 @@
 import "./style.css";
 
-import { config } from '@fortawesome/fontawesome-svg-core'
-
-console.log(config.autoA11y)
+// document.querySelector(".doneButton").style.visibility = "hidden";
+// document.querySelector(".deleteButton").style.visibility = "hidden";
 
 // Add list- submit button
 document.querySelector(".button1").addEventListener("click",function(){
 	var typed = document.querySelector(".typeList").value;
 	// document.querySelector(".lists").innerHTML = typed;
-	document.querySelector(".typeList").value = ""; //Something new I leanrt! 
+	document.querySelector(".typeList").value = ""; //Something new I leanrt!
+	// document.querySelector(".doneButton").style.visibility = "visible";
+	// document.querySelector(".deleteButton").style.visibility = "visible";
 
 	// keep adding elements
 	var el = document.querySelector(".lists");
@@ -16,14 +17,29 @@ document.querySelector(".button1").addEventListener("click",function(){
 	newEL.appendChild(document.createTextNode(typed));
 	el.appendChild(newEL);
 
+	//delete list button
+	var el = document.querySelector(".lists")
+	var newEL = document.createElement("doneButton");
+	newEL.appendChild(document.createTextNode("Done"));
+	el.appendChild(newEL);
+
+	var el = document.querySelector(".lists")
+	var newEL = document.createElement("deleteButton");
+	newEL.appendChild(document.createTextNode("Delete"));
+	el.appendChild(newEL);
+
+
 });
 
 document.addEventListener("keypress",function(e) {
 	if(e.keyCode === 13){
 		var typed = document.querySelector(".typeList").value;
+		e.preventDefault();
 		// document.querySelector(".lists").innerHTML = typed;
 		document.querySelector(".typeList").value = "";
-	
+		// document.querySelector(".doneButton").style.visibility = "visible";
+		// document.querySelector(".deleteButton").style.visibility = "visible";
+
 	var el = document.querySelector(".lists");
 	var newEL = document.createElement("p");
 	newEL.appendChild(document.createTextNode(typed));
@@ -38,6 +54,18 @@ document.querySelector(".button2").addEventListener("click",function() {
     node.removeChild(node.lastChild);
 }
 });
+
+
+
+// document.querySelector(".doneButton").addEventListener("click", function(){
+// 		document.querySelector(".lists p").style.textDecoration = "line-through";
+// 	})
+
+// document.querySelector(".deleteButton").addEventListener("click", function(){
+// 		document.querySelector(".lists p").remove();
+// 	})
+
+
 
 // What I need to build using JS
 
