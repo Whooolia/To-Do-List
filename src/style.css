@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:500');
 /* 특별한 상황아니면 절대 *(universal)를 selector로 사용하지 말 것 */
 body {
 	width: 500px;
 	margin: 0 auto;
+	font-family: 'Roboto+Mono';
 }
 
 h1 {
@@ -12,7 +14,7 @@ h1 {
 
 /* 그냥 tag를 selector로 하는 것보단 class나 id를 지정해줘서 selector를 하는게 더 좋음. 왜냐면 같은 tag가 여러게 일 수도 있으니깐 */
 .container {
-	background: #D1EEF9;
+	background-image: linear-gradient(#90e7ff, #00C9FF);
 	border-radius: 10px;
 	padding-top: 20px;
 	padding-bottom: 20px;
@@ -23,21 +25,28 @@ h1 {
 }
 
 .todo-lists {
-	background: #D1EEF9;
+	background-image: linear-gradient(#00C9FF, #92FE9D);
 	border-radius: 10px;
 	height: 350px;
 }
 
-.todo-lists p {
-	font-size: 20px;
-	text-align: center;
+.todo-lists div{
+	margin-top: 10px;
+	width: 500px;
+}
+
+.todo-lists div p{
+	font-size: 26px;
+	display: inline-block;
+	margin : 0px;
+
 }
 
 .todo-input{
     vertical-align: middle;
     height: 35px;
 	box-sizing: border-box;
-	width: 70%;
+	width: 75%;
 	border: none;
 	text-align: center;
 }
@@ -49,40 +58,67 @@ h1 {
 	cursor: pointer;
 	line-height: 1;
 	font-size: 25px;
-	background-color: #D1EEF9;
+	background-image: linear-gradient(#90e7ff, #00C9FF);
 	border: none;
+	outline:none;
 }
 
 .clear-all-button{
-	background: #368aaa;
+	vertical-align: middle;
+    height: 35px;
+	box-sizing: border-box;
+	cursor: pointer;
+	line-height: 1;
+	font-size: 20px;
+	background-color: #92FE9D;
+	border: none;
+	color: black;
 	border-radius: 10px;
-	border : none;
-	width: 150px;
-	height: 30px;
-	margin-left: 160px;
-	margin-top : 2em;
+	margin : 1.5em 200px;
+	font-family: 'Roboto+Mono';
+	font-weight: bold;
+}
+
+.clear-all-button:hover{
+	transform: scale(1.1);
 }
 
 
-.todo-lists .done-button {
-	background: green;
-	border-radius: 10px;
-	border : none;
-	width: 50px;
-	height: 30px;
-	margin-left: 40px;
-	margin-top: 5px;
-	display:inline;
-	float: left;
-}
- .todo-lists .delete-button {
-	background: red;
-	border-radius: 10px;
+.fa-check {
+	background: black;
+	color : white;
+	border-radius: 50px;
 	border : none;
 	width: 30px;
 	height: 30px;
-	float: right;
+	margin-left: 40px;
 	margin-top: 5px;
+	float: left;
+}
+
+.fa-trash {
+	background: black;
+	color : white;
+	border-radius: 50px;
+	border : none;
+	width: 30px;
+	height: 30px;
 	margin-right: 40px;
-	display:inline;
+	float:right;
+	margin-top: 5px;
+
+}
+
+.todo-lists div{
+	text-align: center;
+}
+
+.fa-check:hover{
+	transform: scale(1.1);
+	background: #00C9FF;
+}
+
+.fa-trash:hover{
+	transform: scale(1.1);
+	background: red;
 }

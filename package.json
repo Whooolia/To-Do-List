@@ -30,6 +30,7 @@
     "dev": "webpack --mode development"
   },
   "dependencies": {
-    "font-awesome": "^4.7.0"
+    "font-awesome": "^4.7.0",
+    "google-fonts-webpack-plugin": "^0.4.4"
   }
 }
