@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:500');
-/* 특별한 상황아니면 절대 *(universal)를 selector로 사용하지 말 것 */
+
 body {
 	width: 500px;
 	margin: 0 auto;
@@ -12,7 +12,6 @@ h1 {
 	margin-top: 0.5em;
 }
 
-/* 그냥 tag를 selector로 하는 것보단 class나 id를 지정해줘서 selector를 하는게 더 좋음. 왜냐면 같은 tag가 여러게 일 수도 있으니깐 */
 .container {
 	background-image: linear-gradient(#90e7ff, #00C9FF);
 	border-radius: 10px;
@@ -22,24 +21,6 @@ h1 {
 	margin-top: 10px;
 	text-align: center;
 	max-width: 700px;
-}
-
-.todo-lists {
-	background-image: linear-gradient(#00C9FF, #92FE9D);
-	border-radius: 10px;
-	height: 350px;
-}
-
-.todo-lists div{
-	margin-top: 10px;
-	width: 500px;
-}
-
-.todo-lists div p{
-	font-size: 26px;
-	display: inline-block;
-	margin : 0px;
-
 }
 
 .todo-input{
@@ -61,6 +42,25 @@ h1 {
 	background-image: linear-gradient(#90e7ff, #00C9FF);
 	border: none;
 	outline:none;
+}
+
+.todo-lists {
+	background-image: linear-gradient(#00C9FF, #92FE9D);
+	border-radius: 10px;
+	height: 350px;
+}
+
+.todo-lists div{
+	margin-top: 10px;
+	width: 500px;
+	text-align: center;
+}
+
+.todo-lists div p{
+	font-size: 26px;
+	display: inline-block;
+	margin : 0px;
+
 }
 
 .clear-all-button{
@@ -106,11 +106,6 @@ h1 {
 	margin-right: 40px;
 	float:right;
 	margin-top: 5px;
-
-}
-
-.todo-lists div{
-	text-align: center;
 }
 
 .fa-check:hover{
