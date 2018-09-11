@@ -3,12 +3,13 @@ import "./style.css";
 
 // Add list button
 document.querySelector(".add-button").addEventListener("click",function(e){
-	var newDoneEL = document.createElement("button", "i");
-	var newDeleteEL = document.createElement("button", "i");
 	var typed = document.querySelector(".todo-input").value;
 	var el = document.querySelector(".todo-lists");
-	var newDiv = document.createElement("div");
 	var newTodoEL = document.createElement("p");
+	var newDoneEL = document.createElement("button", "i");
+	var newDeleteEL = document.createElement("button", "i");
+	var newDiv = document.createElement("div");
+	
 
 	e.preventDefault();
 	document.querySelector(".todo-input").value = ""; 
@@ -30,9 +31,9 @@ document.querySelector(".add-button").addEventListener("click",function(e){
 	newDoneEL.className = "fa fa-check";
 	newDiv.appendChild(newDoneEL);
 	newDoneEL.addEventListener("click", function(){
-	newTodoEL.style.color = "white";
-	newTodoEL.style.opacity = "0.7";
-	newDoneEL.style.visibility = "hidden";
+		newTodoEL.style.color = "white";
+		newTodoEL.style.opacity = "0.7";
+		newDoneEL.style.visibility = "hidden";
 	});
 
 	newDeleteEL.className = "delete-button";
@@ -48,11 +49,12 @@ document.querySelector(".add-button").addEventListener("click",function(e){
 
 
 document.addEventListener("keypress",function(e) {
+	var typed = document.querySelector(".todo-input").value;
 	var el = document.querySelector(".todo-lists");
-	var newDiv = document.createElement("div");
 	var newTodoEL = document.createElement("p");
 	var newDoneEL = document.createElement("button", "i");
 	var newDeleteEL = document.createElement("button", "i");
+	var newDiv = document.createElement("div");
 
 	if(e.keyCode === 13){
 		var typed = document.querySelector(".todo-input").value;
